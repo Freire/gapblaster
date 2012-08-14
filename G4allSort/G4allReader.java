@@ -5,6 +5,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ * Does all the reading of a .G4all file
+ * Returns a G4all object for each alignment result
+ * @author fabio
+ */
 public class G4allReader {
     
     private Scanner input; // Object that will read the input file

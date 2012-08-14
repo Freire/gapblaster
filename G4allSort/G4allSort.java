@@ -10,7 +10,7 @@ import java.util.ListIterator;
  * This class is used to load a file with alignment results and sort it
  * by subject start.
  * Notice that if you load and save a file without sorting it
- * you will be just copying its
+ * you will be just copying it
  * @author fabio
  */
 public class G4allSort {

@@ -14,7 +14,7 @@ public class G4allReader {
      * This method just opens the input file for reading purposes
      * @param input the name of the file to read
      */
-    void open(String input) {
+    public void open(String input) {
         try {
             this.input = new Scanner(new File(input));
         } catch(FileNotFoundException error) {
@@ -25,7 +25,7 @@ public class G4allReader {
     /**
      * This method closes the file after all reading has been done
      */
-    void close() {
+    public void close() {
         input.close();
     }
     
@@ -33,7 +33,7 @@ public class G4allReader {
      * This method checks whether a file still has lines to read
      * @return true if file still has something to read
      */
-    boolean hasNext() {
+    public boolean hasNext() {
         return input.hasNext();
     }
     
@@ -41,7 +41,7 @@ public class G4allReader {
      * This method is used to get the next alignment result from a file
      * @return next alignment result
      */
-    G4all getNext() {
+    public G4all getNext() {
         if(input.hasNext()) {
             alignment_result = new G4all();
             alignment_result.setContig(input.next());

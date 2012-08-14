@@ -4,11 +4,23 @@ package g4allsort;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 
+/**
+ * This class opens a file and can write G4all objects to it
+ * without much effort.
+ * After all has been written then the file needs to be closed
+ * so changes can be saved
+ * @author fabio
+ */
 public class G4allWriter {
     
-    private FileWriter file;
-    private BufferedWriter output;
+    private FileWriter file; // File that will be written
+    private BufferedWriter output; // Object that manipulates the output file
     
+    /**
+     * Opens a file to write alignment results
+     * If the file already exists then it will be overwritten
+     * @param output the name of the file to be written
+     */
     public void open(String output) {
         try {
             file = new FileWriter(output);
@@ -18,6 +30,10 @@ public class G4allWriter {
         }
     }
     
+    /**
+     * Writes an alignment result to an opened file
+     * @param alignment_result the alignment to be written
+     */
     public void write(G4all alignment_result) {
         try {
             output.write(alignment_result.getContig() + "\t");
@@ -37,6 +53,10 @@ public class G4allWriter {
         }
     }
     
+    /**
+     * Closes the file after all has been written
+     * If this method isn't called then any changes won't be saved
+     */
     public void close() {
         try {
             output.close();

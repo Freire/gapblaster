@@ -6,6 +6,13 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
+/**
+ * This class is used to load a file with alignment results and sort it
+ * by subject start.
+ * Notice that if you load and save a file without sorting it
+ * you will be just copying it
+ * @author fabio
+ */
 public class G4allSort {
     
     private List list; // List with all hits
@@ -22,23 +29,6 @@ public class G4allSort {
         alignment_result = new G4all();
         input = new G4allReader();
         output = new G4allWriter();
-    }
-
-    /**
-     * This subroutine starts the program using an G4allSort object
-     * But first it checks if the parameters are OK
-     * If they aren't then it just prints a message and quit
-     * @param args the parameters received from command line
-     */
-    public static void main(String[] args) {
-        if(args.length == 2) {
-            G4allSort program = new G4allSort();
-            program.load(args[0]);
-            program.sort();
-            program.save(args[1]);
-        } else {
-            System.out.println("\nUsage: g4allsort [INPUT] [OUTPUT]\n");
-        }
     }
     
     /**

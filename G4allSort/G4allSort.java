@@ -14,7 +14,7 @@ public class G4allSort {
     private G4allWriter output; // Writes to output file
     
     /**
-    * This constructor doesn't get any param nor does it return anything
+    * This constructor doesn't get any param nor does it return something
     * It just initializes the objects used
     */
     G4allSort() {

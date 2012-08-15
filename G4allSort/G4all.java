@@ -12,15 +12,15 @@ public class G4all implements Comparable<G4all>{
     private String contig; // The name of the contig queried
     private String genome; // The name of the source genome
     private int length; // The length of the alignment
-    private int wrong_identities;
+    private int wrong_identities; // The number of wrong identities
     private int gaps; // Number of gaps in the alignment
     private int query_start; // Start position of the alignment in the query
     private int query_end; // End position of the alignment in the query
     private int subject_start; // Start position of the alignment in the subject
     private int subject_end; // End position of the alignment in the subject
     private String e_value; // E-value of the alignment
-    private String score_bits;
-    private String identities;
+    private String score_bits; // The value of score bits
+    private String identities; // The number of identities
     
     /**
      * Sets the name of the contig

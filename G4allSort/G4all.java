@@ -1,111 +1,176 @@
 
 package g4allsort;
 
+/**
+ * Class that implements a single hit as a struct
+ * It has a special method to enable comparing two objects
+ * It is useful when sorting a list
+ * @author fabio
+ */
 public class G4all implements Comparable<G4all>{
     
-    private String contig, genome;
-    private int length;
+    private String contig; // The name of the contig queried
+    private String genome; // The name of the source genome
+    private int length; // The length of the alignment
     private int wrong_identities;
-    private int gaps;
-    private int query_start, query_end;
-    private int subject_start, subject_end;
-    private String e_value;
+    private int gaps; // Number of gaps in the alignment
+    private int query_start; // Start position of the alignment in the query
+    private int query_end; // End position of the alignment in the query
+    private int subject_start; // Start position of the alignment in the subject
+    private int subject_end; // End position of the alignment in the subject
+    private String e_value; // E-value of the alignment
     private String score_bits;
     private String identities;
     
-    void setContig(String contig) {
+    /**
+     * Sets the name of the contig
+     * @param contig the name of the contig to be set
+     */
+    public void setContig(String contig) {
         this.contig = contig;
     }
     
-    String getContig() {
+    /**
+     * Returns the name of the contig
+     * @return the name of the contig
+     */
+    public String getContig() {
         return contig;
     }
     
-    void setGenome(String genome) {
+    /**
+     * Sets the name of the genome
+     * @param genome the name of the genome
+     */
+    public void setGenome(String genome) {
         this.genome = genome;
     }
     
-    String getGenome() {
+    /**
+     * Returns the name of the genome
+     * @return the name of the genome
+     */
+    public String getGenome() {
         return genome;
     }
     
-    void setLength(int length) {
+    /**
+     * Sets the length of the alignment
+     * @param length the length of the alignment
+     */
+    public void setLength(int length) {
         this.length = length;
     }
     
-    int getLength() {
+    /**
+     * Returns the length of the alignment
+     * @return the length of the alignment
+     */
+    public int getLength() {
         return length;
     }
     
-    void setWrongIdentities(int wrong_identities) {
+    /**
+     * Sets the length of the alignments
+     * @param wrong_identities 
+     */
+    public void setWrongIdentities(int wrong_identities) {
         this.wrong_identities = wrong_identities;
     }
     
-    int getWrongIdentities() {
+    /**
+     * Returns the number of wrong identities
+     * @return the number of wrong identities
+     */
+    public int getWrongIdentities() {
         return wrong_identities;
     }
     
-    void setGaps(int gaps) {
+    /**
+     * Sets the number of gaps in the alignment
+     * @param gaps the number of gaps in the alignment
+     */
+    public void setGaps(int gaps) {
         this.gaps = gaps;
     }
     
-    int getGaps() {
+    /**
+     * Returns the number of gaps in the alignment
+     * @return the number of gaps in the alignment
+     */
+    public int getGaps() {
         return gaps;
     }
     
-    void setQueryStart(int query_start) {
+    /**
+     * Sets the query start position that was aligned
+     * @param query_start the query start position that was aligned
+     */
+    public void setQueryStart(int query_start) {
         this.query_start = query_start;
     }
     
-    int getQueryStart() {
+    /**
+     * Returns the query start position that was aligned
+     * @return the query start position that was aligned
+     */
+    public int getQueryStart() {
         return query_start;
     }
     
-    void setQueryEnd(int query_end) {
+    /**
+     * Sets the query end position that was aligned
+     * @param query_end the query end position that was aligned
+     */
+    public void setQueryEnd(int query_end) {
         this.query_end = query_end;
     }
     
-    int getQueryEnd() {
+    /**
+     * Returns the query end position that was aligned
+     * @return the query end position that was aligned
+     */
+    public int getQueryEnd() {
         return query_end;
     }
     
-    void setSubjectStart(int subject_start) {
+    public void setSubjectStart(int subject_start) {
         this.subject_start = subject_start;
     }
     
-    int getSubjectStart() {
+    public int getSubjectStart() {
         return subject_start;
     }
     
-    void setSubjectEnd(int subject_end) {
+    public void setSubjectEnd(int subject_end) {
         this.subject_end = subject_end;
     }
     
-    int getSubjectEnd() {
+    public int getSubjectEnd() {
         return subject_end;
     }
     
-    void setEValue(String e_value) {
+    public void setEValue(String e_value) {
         this.e_value = e_value;
     }
     
-    String getEValue() {
+    public String getEValue() {
         return e_value;
     }
     
-    void setScoreBits(String score_bits) {
+    public void setScoreBits(String score_bits) {
         this.score_bits = score_bits;
     }
     
-    String getScoreBits() {
+    public String getScoreBits() {
         return score_bits;
     }
     
-    void setIdentities(String identities) {
+    public void setIdentities(String identities) {
         this.identities = identities;
     }
     
-    String getIdentities() {
+    public String getIdentities() {
         return identities;
     }
     

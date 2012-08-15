@@ -134,46 +134,92 @@ public class G4all implements Comparable<G4all>{
         return query_end;
     }
     
+    /**
+     * Sets the subject start position that was aligned
+     * @param subject_start the subject start position that was aligned
+     */
     public void setSubjectStart(int subject_start) {
         this.subject_start = subject_start;
     }
     
+    /**
+     * Returns the subject start position that was aligned
+     * @return the subject start position that was aligned
+     */
     public int getSubjectStart() {
         return subject_start;
     }
     
+    /**
+     * Sets the subject end position that was aligned
+     * @param subject_end the subject end position that was aligned
+     */
     public void setSubjectEnd(int subject_end) {
         this.subject_end = subject_end;
     }
     
+    /**
+     * Returns the subject end position that was aligned
+     * @return the subject end position that was aligned
+     */
     public int getSubjectEnd() {
         return subject_end;
     }
     
+    /**
+     * Sets the e-value of the alignment
+     * @param e_value the e-value of the alignment
+     */
     public void setEValue(String e_value) {
         this.e_value = e_value;
     }
     
+    /**
+     * Returns the e-value of the alignment
+     * @return the e-value of the alignment
+     */
     public String getEValue() {
         return e_value;
     }
     
+    /**
+     * Sets the score bits of the alignment
+     * @param score_bits the score bits of the alignment
+     */
     public void setScoreBits(String score_bits) {
         this.score_bits = score_bits;
     }
     
+    /**
+     * Returns the score bits of the alignment
+     * @return the score bits of the alignment
+     */
     public String getScoreBits() {
         return score_bits;
     }
     
+    /**
+     * Sets the number of identities of the alignment
+     * @param identities the number of identities of the alignment
+     */
     public void setIdentities(String identities) {
         this.identities = identities;
     }
     
+    /**
+     * Returns the number of identities of the alignment
+     * @return the number of identities of the alignment
+     */
     public String getIdentities() {
         return identities;
     }
     
+    /**
+     * Compares two alignments
+     * It is useful to help sort a list of this object using Collections.sort
+     * @param alignment_result the alignment result to be compared
+     * @return -1 if the subject start is smaller, 1 if it is bigger or 0 if both are equal
+     */
     @Override
     public int compareTo(G4all alignment_result) {
         if(subject_start < alignment_result.subject_start) {

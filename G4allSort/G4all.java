@@ -10,14 +10,14 @@ package g4allsort;
 public class G4all implements Comparable<G4all>{
     
     private String contig; // The name of the contig queried
-    private String genome; // The name of the source genome
+    private String genome; // The name of the reference genome
     private int length; // The length of the alignment
-    private int wrong_identities; // The number of wrong identities
-    private int gaps; // Number of gaps in the alignment
+    private int mismatches; // The number of mismatches
+    private int gaps; // Number of gaps in the alignment (conting both query and subject)
     private int query_start; // Start position of the alignment in the query
     private int query_end; // End position of the alignment in the query
-    private int subject_start; // Start position of the alignment in the subject
-    private int subject_end; // End position of the alignment in the subject
+    private int source_start; // Start position of the alignment in the reference genome
+    private int source_end; // End position of the alignment in the reference genome
     private String e_value; // E-value of the alignment
     private String score_bits; // The value of score bits
     private String identities; // The number of identities
@@ -74,16 +74,16 @@ public class G4all implements Comparable<G4all>{
      * Sets the length of the alignments
      * @param wrong_identities 
      */
-    public void setWrongIdentities(int wrong_identities) {
-        this.wrong_identities = wrong_identities;
+    public void setMismatches(int mismatches) {
+        this.mismatches = mismatches;
     }
     
     /**
      * Returns the number of wrong identities
      * @return the number of wrong identities
      */
-    public int getWrongIdentities() {
-        return wrong_identities;
+    public int getMismatches() {
+        return mismatches;
     }
     
     /**
@@ -138,32 +138,32 @@ public class G4all implements Comparable<G4all>{
      * Sets the subject start position that was aligned
      * @param subject_start the subject start position that was aligned
      */
-    public void setSubjectStart(int subject_start) {
-        this.subject_start = subject_start;
+    public void setSourceStart(int source_start) {
+        this.source_start = source_start;
     }
     
     /**
      * Returns the subject start position that was aligned
      * @return the subject start position that was aligned
      */
-    public int getSubjectStart() {
-        return subject_start;
+    public int getSourceStart() {
+        return source_start;
     }
     
     /**
      * Sets the subject end position that was aligned
      * @param subject_end the subject end position that was aligned
      */
-    public void setSubjectEnd(int subject_end) {
-        this.subject_end = subject_end;
+    public void setSourceEnd(int source_end) {
+        this.source_end = source_end;
     }
     
     /**
      * Returns the subject end position that was aligned
      * @return the subject end position that was aligned
      */
-    public int getSubjectEnd() {
-        return subject_end;
+    public int getSourceEnd() {
+        return source_end;
     }
     
     /**

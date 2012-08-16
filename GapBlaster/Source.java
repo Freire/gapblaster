@@ -10,7 +10,7 @@ import java.util.Scanner;
  * This class contains the methods to load and get parts of the reference
  * @author fabio
  */
-public class Reference {
+public class Source {
     
     private Scanner input; // This object will read the source file
     protected ArrayList sequence; // The sequence is represented as an array, because string is too slow
@@ -19,7 +19,7 @@ public class Reference {
     /**
      * Initializes the arraylist that will hold the sequence
      */
-    Reference() {
+    Source() {
         sequence = new ArrayList();
     }
     
